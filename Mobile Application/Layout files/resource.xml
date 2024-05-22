@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PetWell Resources"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Body Section -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <!-- Resource Section 1: Pet Adoption Centers -->
+
+            <!-- Resource Section 2: Online Vets -->
+            <LinearLayout
+                android:id="@+id/adoption"
+                android:layout_width="match_parent"
+                android:layout_height="143dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <!-- Image -->
+
+                <!-- Title -->
+
+                <!-- Links -->
+                <TextView
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Pet Adoption Centers"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="openUrl"
+                    android:text="https://www.petfinder.com/"
+                    android:textColor="#3282A6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="openUrl"
+                    android:text="https://thepetnest.com/adopt-a-pet"
+                    android:textColor="#3282A6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="openUrl"
+                    android:text="https://iadopt.in/"
+                    android:textColor="#3282A6" />
+
+            </LinearLayout>
+
+            <!-- Resource Section 3: Animal Welfare -->
+            <LinearLayout
+                android:id="@+id/vets"
+                android:layout_width="match_parent"
+                android:layout_height="141dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <!-- Image -->
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="343dp"
+                    android:layout_height="wrap_content"
+                    android:text="Online Vets"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Links -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="openUrl"
+                    android:text="https://www.wagr.ai/pages/consults"
+                    android:textColor="#3282A6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="openUrl"
+                    android:text="https://www.vetlive.in/"
+                    android:textColor="#3282A6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="openUrl"
+                    android:gravity="center"
+                    android:text="https://www.wiggles.in/products/smartvet-online-consultation/"
+                    android:textColor="#3282A6" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/welfare"
+                android:layout_width="match_parent"
+                android:layout_height="149dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <!-- Image -->
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Animal Welfare Pages"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Links -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="openUrl"
+                    android:text="https://bluecrossofindia.org/"
+                    android:textColor="#3282A6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="openUrl"
+                    android:text="https://www.animalaidunlimited.org/"
+                    android:textColor="#3282A6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="openUrl"
+                    android:text="https://www.fiapo.org/fiaporg/"
+                    android:textColor="#3282A6" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#333"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© 2023 PetWell Resources. All rights reserved."
+            android:textColor="@android:color/white"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+</RelativeLayout>
