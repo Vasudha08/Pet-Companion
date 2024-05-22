@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Management System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Center content vertically */
+            height: 100%; /* Set body height to 100% */
+            width: 100%; /* Set body width to 100% */
+        }
+
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin: auto;
+            width: 35%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(2, 1, 0, 0.1);
+        }
+        
+        input[type="submit"] {
+            background-color: blue;
+            color: white; /* Text color */
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: darkblue; /* Change color on hover if desired */
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="date"] {
+            width: calc(100% - 16px); /* Adjusted width to accommodate the date picker arrow */
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Logs</h1>
+    </header>
+
+    <form id="log-form" action="#" method="post" enctype="multipart/form-data">
+        <label for="logName">Log Name:</label>
+        <input type="text" id="logName" name="logName" required>
+
+        <label for="logDate">Date:</label>
+        <input type="date" id="logDate" name="logDate" required>
+
+        <label for="logDetails">Log Details:</label>
+        <textarea id="logDetails" name="logDetails" rows="4"></textarea>
+
+        <label for="logImage">Upload Certificate Image:</label>
+        <input type="file" id="logImage" name="logImage" accept="image/*">
+
+        <!-- Additional Fields -->
+        <label for="logCategory">Log Category:</label>
+        <select id="logCategory" name="logCategory">
+            <option value="vaccination">Vaccination</option>
+            <option value="medication">Medication</option>
+            <option value="nutrition">Nutrition</option>
+            <option value="others">Others</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <br><br>
+
+        <input type="submit">
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Pet Wellness System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("log-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Display confirmation message
+            alert("Log added successfully!");
+        });
+    </script>
+
+</body>
+</html>

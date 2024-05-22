@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Wellness System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+ 
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .colorful-heading {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      width: 200px; /* Set the width of the box */
+      text-align: center; /* Center the text */
+    }
+.upload-button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      margin-left: 5px; 
+    }
+
+    .log-section,
+    .reminder-section {
+      margin-bottom: 20px;
+    }
+
+    .log-list,
+    .reminder-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .log-item,
+    .reminder-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding: 8px 0;
+margin-right: 5px; 
+    }
+
+    .log-item span,
+    .reminder-item span {
+      flex: 1;
+    }
+
+    .log-item button,
+    .reminder-item button {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+      padding: 5px;
+      margin: 5px 0;
+      width: 90%;
+    }
+  </style>
+</head>
+
+<body>
+
+ <header>
+  <h1>Pet Companion</h1>
+  <p><i>Welcome to our Pet Wellness System. Keep track of your pet's health and activities.</i></p>
+</header>
+
+
+  <main>
+    <div class="log-section">
+      <h2>Logs</h2>
+
+     <div id="vaccination-log" class="log-list">
+        <ul></ul>
+        <div class="log-item">
+          <h5 class="colorful-heading">Vaccination Log</h5>
+          <span><input type="text" placeholder="Vaccine Name"></span>
+          <span><input type="date"></span>
+          <button onclick="addLog('vaccination-log')">Add</button>
+          <button class="upload-button" onclick="uploadImage('vaccination-log')">Upload Image</button>
+        </div>
+      </div>
+
+      <div id="medication-log" class="log-list">
+        <ul></ul>
+        <div class="log-item">
+          <h5 class="colorful-heading">Medication Log</h5>
+          <span><input type="text" placeholder="Medicine Name"></span>
+          <span><input type="date"></span>
+          <button onclick="addLog('medication-log')">Add</button>
+          <button class="upload-button" onclick="uploadImage('medication-log')">Upload Image</button>
+        </div>
+      </div>
+
+      <div id="weight-log" class="log-list">
+        <ul></ul>
+        <div class="log-item">
+          <h5 class="colorful-heading">Weight Log</h5>
+          <span><input type="text" placeholder="Weight"></span>
+          <span><input type="date"></span>
+          <button onclick="addLog('weight-log')">Add</button>
+          <button class="upload-button" onclick="uploadImage('weight-log')">Upload Image</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="reminder-section">
+      <h2>Reminders</h2>
+
+      <div id="vaccination-reminder" class="reminder-list">
+        <ul></ul>
+        <div class="reminder-item">
+          <h5 class="colorful-heading">Vaccination Reminder</h5>
+          <span><input type="text" placeholder="Name"></span>
+          <span><input type="date"></span>
+          <button onclick="addReminder('vaccination-reminder')">Add</button>
+        </div>
+      </div>
+
+      <div id="health-checkup-reminder" class="reminder-list">
+        <ul></ul>
+        <div class="reminder-item">
+          <h5 class="colorful-heading">Health Checkup Reminder</h5>
+          <span><input type="text" placeholder="Name"></span>
+          <span><input type="date"></span>
+          <button onclick="addReminder('health-checkup-reminder')">Add</button>
+        </div>
+      </div>
+
+      <div id="grooming-reminder" class="reminder-list">
+        <ul></ul>
+        <div class="reminder-item">
+          <h5 class="colorful-heading">Grooming Reminder</h5>
+          <span><input type="text" placeholder="Name"></span>
+          <span><input type="date"></span>
+          <button onclick="addReminder('grooming-reminder')">Add</button>
+        </div>
+      </div>
+
+
+      <div id="exercise-reminder" class="reminder-list">
+        <ul></ul>
+        <div class="reminder-item">
+          <h5 class="colorful-heading">Training Reminder</h5>
+          <span><input type="text" placeholder="Name"></span>
+          <span><input type="date"></span>
+          <button onclick="addReminder('exercise-reminder')">Add</button>
+        </div>
+      </div>
+    </div>
+    <div id="new-items-container"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Pet Wellness System. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>

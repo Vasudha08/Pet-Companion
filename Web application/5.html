@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Wellness System - Reminders</title>
+  <style>
+    /* General styling for the entire page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6f6f6;
+    }
+
+    /* Styling for header and footer elements */
+    header,
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    header p {
+      font-style: italic;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Styling for the main content area */
+    main {
+      max-width: 600px;
+      width: 80%;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      margin: 20px auto; /* Center the main element horizontally */
+      height:400px
+      
+    }
+
+    /* Styling for form elements */
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    select {
+      width: calc(100% - 16px);
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+    }
+   
+    h2{
+      text-align: center;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Pet Companion</h1>
+    <p><i> Stay on top of your pet's care routine with our handy reminder tool</i></p>
+  </header>
+
+  <main>
+     <h2>REMINDER</h2>
+    <form id="reminder-form" onsubmit="addReminder(event)">
+      <label for="reminder-name">Reminder Name:</label>
+      <input type="text" id="reminder-name" name="reminder-name" required>
+
+      <label for="reminder-date">Date:</label>
+      <input type="date" id="reminder-date" name="reminder-date" required>
+ 
+      <label for="reminder-time">Time:</label>
+      <input type="time" id="reminder-time" name="reminder-time">
+
+      <label for="reminder-frequency">Frequency:</label>
+      <select id="reminder-frequency" name="reminder-frequency">
+        <option value="everyday">Everyday</option>
+        <option value="custom">Custom Days</option>
+        <option value="same-day-monthly">Every Month on Same Date</option>
+        <!-- Add more options as needed -->
+      </select>
+
+      <input type="submit" value="Add Reminder" style="display: block; margin: 0 auto; ">    
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Pet Wellness System. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function addReminder(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+
+
+      // Construct a message to display
+      var message = "REMINDER ADDED!!!"
+
+      // Display the message
+      alert(message);
+    }
+  </script>
+
+</body>
+
+</html>

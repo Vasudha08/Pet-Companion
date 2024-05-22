@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Wellness System</title>
+  <style>
+    /* General styling for the entire page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6f6f6;
+    }
+
+    /* Styling for header and footer elements */
+    header, footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    header p {
+      font-style: italic;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    
+    /* Styling for the main content area */
+    main {
+      max-width: 800px;
+      width: 100%;
+      height: 60vh;
+      padding: 20px;
+      background: url('bg1.jpg') center center/cover no-repeat;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 20px auto; /* Center the main element horizontally */
+      outline: 2px solid black; /* Example: Adding a red outline to the main element */
+    }
+
+    /* Styling for the button container */
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; /* Center the buttons vertically */
+      height: 100%; /* Ensure the container takes up the full height of the main element */
+    }
+
+    /* Styling for the dropdown menu */
+    .dropdown {
+      margin-bottom: 10px;
+      width: 50%;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 12px 24px; /* Increased button padding */
+      cursor: pointer;
+      margin-bottom: 5px;
+      width: 100%; /* Make all buttons the same width */
+      box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+</style>
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Pet Companion</h1>
+    <p><i>Welcome to our Pet Wellness System. Keep track of your pet's health and activities.</i></p>
+  </header>
+
+  <main>
+    <div class="button-container">
+      <div class="dropdown">
+        <button onclick="window.location.href='4.html'">Logs</button>
+      </div>
+
+      <div class="dropdown">
+        <button onclick="window.location.href='5.html'">Reminders</button>
+      </div>
+      
+      <div class="dropdown">
+        <button onclick="window.location.href='2.html'">Training Guides</button>
+      </div>
+
+     <div class="dropdown">
+        <button onclick="window.location.href='3.html'">PawCare Directory</button>
+    </div>
+
+
+    <!-- Rest of your content -->
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Pet Wellness System. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
